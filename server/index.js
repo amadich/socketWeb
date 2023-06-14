@@ -25,7 +25,7 @@ io.on("connection", (socket) => {
    })
 
    socket.on("msg_send" , (data) => {
-      socket.to(data.room).emit("resive_msg" , data.message)
+      socket.to(data.room).emit("resive_msg" , data)
    })
 
    socket.on("disconnect", (socket) => {
